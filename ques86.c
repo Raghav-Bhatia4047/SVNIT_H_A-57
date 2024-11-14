@@ -1,16 +1,16 @@
 #include<stdio.h>
+int strlen1(char a[100]);
 int main()
 {
-    int a, b,c,d;
-    for( a=0;a<=500;a++)
-    {
-        b=a%10;
-        c=(a/10)%10;
-        d=a/100;
-        if(a==(b*b*b)+(c*c*c)+(d*d*d))
-        {
-            printf("%d\n",a);
-        }
-    }
-    return 0;
+    char a[100];
+    printf("read the line:");
+    gets(a);
+    strlen1(a);
+}
+int strlen1(char a[100])
+{
+    int i=0;
+    while(a[i++]!='\0');
+    i--;
+    printf("len of string=%d",i); 
 }
